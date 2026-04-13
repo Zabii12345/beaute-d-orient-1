@@ -294,7 +294,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('../public/hero_hammam.png');
+  background-image: url('/hero_hammam.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -807,6 +807,34 @@ section {
 .fade-in-section.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 767px) {
+  /* Smaller hero text on mobile */
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    margin-bottom: var(--spacing-2);
+  }
+
+  /* Smaller logo text on mobile */
+  .logo {
+    font-size: 1.4rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* When Book Now button is shown on mobile (when scrolled) */
+  .header.scrolled .logo {
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+  }
+
+  .header.scrolled .btn-nav {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    min-height: 36px;
+    min-width: 36px;
+  }
 }
 
 /* Media Queries */
